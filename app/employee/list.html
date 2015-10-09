@@ -1,0 +1,30 @@
+<section class="searchField">
+    <form ng-submit="search()">
+        <input type="text" ng-model="searchTerm">
+        <input type="submit" value="Find coder">
+    </form>
+</section>
+
+<!-- In results, we show a message if there are no results, and
+     a list of results otherwise. -->
+<section class="results">
+    <div class="no-employees" ng-hide="employees.length">No results</div>
+
+    <!-- We show one of these elements for each recipe in $scope.recipes.
+         The ng-cloak directive prevents our templates from showing on load. -->
+    <article class="employee" ng-repeat="employee in employees" ng-cloak>
+        <h2>
+            <a ng-href="{{employee.url}}">{{employee.name.last}}</a>
+        </h2>
+        <ul>
+            <li ng-repeat="programmingLanguage in employee.programmingLanguages">{{ programmingLanguage }}</li>
+        </ul>
+
+    </article>
+
+    <!-- We put a link that calls $scope.loadMore to load more recipes
+         and append them to the results.-->
+    <div class="load-more" ng-hide="allResults" ng-cloak>
+        <a ng-click="loadMore()">More...</a>
+    </div>
+</section>

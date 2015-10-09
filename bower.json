@@ -1,0 +1,17 @@
+{
+    "name": "hunt-coder",
+    "description": "Web client for hunt-coder",
+    "version": "0.0.0",
+    "homepage": "https://github.com/goldun/hunt-coder",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "~1.4.0",
+        "angular-route": "~1.4.0",
+        "angular-loader": "~1.4.0",
+        "angular-mocks": "~1.4.0",
+        "html5-boilerplate": "~5.2.0",
+        "elastic.js": "~1.2.0",
+        "elasticsearch": "~8.2.0"
+    }
+}
